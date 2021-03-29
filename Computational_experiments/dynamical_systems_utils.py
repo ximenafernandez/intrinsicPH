@@ -39,20 +39,17 @@ def plot_trajectories(x,y,z,title, type_plot):
     'Plot 3 trajectories using a Matplotlib 3D projection.
     '''
     
-    fig = plt.figure(figsize=(5,3))
+    fig = plt.figure(figsize=(6,4))
 
     ax = Axes3D(fig)
     
     if type_plot == 'line':
-        ax.plot(x, y, z, 'b-', lw=0.5, color='coral')
+        ax.plot(x, y, z, 'b-', lw=0.5, color='lightcoral')
     
     if type_plot == 'scatter':
         ax.scatter(x, y, z, s=0.5)
 
-    ax.set_xlabel('x', fontsize=10)
-    ax.set_ylabel('y', fontsize=10)
-    ax.set_zlabel('z', fontsize=10)
-    plt.tick_params(labelsize=5)
+    plt.tick_params(labelsize=7)
     ax.set_title(title, fontsize=10)
 
     plt.show()

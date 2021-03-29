@@ -4,6 +4,22 @@ from ripser import Rips
 import matplotlib.pyplot as plt
 
 
+def compute_fermat_distance_D(data, alpha, k):
+    
+    #Compute euclideandistances
+    distances = distance_matrix(data,data)
+    
+    # Initialize the model
+    fermat = Fermat(alpha = alpha, path_method='D', k = k) #method Dijkstra
+
+    # Fit
+    fermat.fit(distances)
+    
+    ##Compute Fermat distances
+    fermat_dist = fermat.get_distances()
+    
+    return  fermat_dist
+
 def compute_fermat_distance(data, p):    
     '''
     Computes the sample Fermat distance.
@@ -13,7 +29,7 @@ def compute_fermat_distance(data, p):
     distances = distance_matrix(data,data)
     
     # Initialize the model
-    fermat = Fermat(alpha = p, path_method='FW') 
+    fermat = Fermat(alpha = p, path_method='FW')  # method Floyd-Warshall
 
     # Fit
     fermat.fit(distances)
