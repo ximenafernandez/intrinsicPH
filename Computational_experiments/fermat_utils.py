@@ -4,13 +4,13 @@ from ripser import Rips
 import matplotlib.pyplot as plt
 
 
-def compute_fermat_distance_D(data, alpha, k):
+def compute_fermat_distance_D(data, p, k):
     
-    #Compute euclideandistances
-    distances = distance_matrix(data,data)
+    #Compute euclidean distances
+    distances = distance_matrix(data, data)
     
     # Initialize the model
-    fermat = Fermat(alpha = alpha, path_method='D', k = k) #method Dijkstra
+    fermat = Fermat(alpha = p, path_method='D', k = k) #method Dijkstra
 
     # Fit
     fermat.fit(distances)
