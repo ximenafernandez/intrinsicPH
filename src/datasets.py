@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from numpy import linspace,pi,cos,sin
+from   numpy import linspace,pi,cos,sin
 
 
 #Eyeglasses

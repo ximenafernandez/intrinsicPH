@@ -1,6 +1,6 @@
-from fermat import Fermat
-from scipy.spatial import  distance_matrix
-from ripser import Rips
+from   fermat        import Fermat
+from   scipy.spatial import  distance_matrix
+from   ripser        import Rips
 import matplotlib.pyplot as plt
 
 

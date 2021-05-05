@@ -2,12 +2,13 @@ import numpy as np
 import math
 import random
 import gudhi
+import matplotlib.pyplot as plt
+import pandas as pd
+
 from sklearn.neighbors import KDTree
 from sklearn.metrics.pairwise import euclidean_distances
-import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-from fermat_utils import *
-import pandas as pd
+from src.distance import *
 from ripser import Rips
 
 '''
