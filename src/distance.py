@@ -40,9 +40,9 @@ def compute_fermat_distance(data, p):
     return  fermat_dist
 
 
-def compute_ISOMAP_distance(data, k):
+def compute_kNN_distance(data, k):
     '''
-    Computes the  estimator of geodesic distance of the algorithm ISOMAP.
+    Computes the  estimator of geodesic distance using kNN graph.
     '''
     
     distances = distance_matrix(data,data)
@@ -56,7 +56,7 @@ def compute_ISOMAP_distance(data, k):
     
     return adj_dist
 
-def Fermat_dgm(data, p, rescaled=False, d=None, mu=None):
+def Fermat_dgm(data, p, rescaled=False, d=None, mu=None, title=None):
     '''
     Computes the persistence diagram using Fermat distance.
     '''
@@ -68,5 +68,8 @@ def Fermat_dgm(data, p, rescaled=False, d=None, mu=None):
     dgms = rips.fit_transform(distance_matrix, distance_matrix=True)
     fig = plt.figure()
     rips.plot(dgms, lifetime=True)
-    plt.title('Fermat distance with p = %s'%(p))
+    if title==None:
+        plt.title('Fermat distance with p = %s'%(p))
+    else:
+        plt.title(title)
     return dgms

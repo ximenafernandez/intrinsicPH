@@ -39,7 +39,7 @@ def plot_trajectories(x,y,z,title, type_plot):
     'Plot 3 trajectories using a Matplotlib 3D projection.
     '''
     
-    fig = plt.figure(figsize=(6,4))
+    fig = plt.figure(figsize=(8,6))
 
     ax = Axes3D(fig)
     
@@ -49,8 +49,8 @@ def plot_trajectories(x,y,z,title, type_plot):
     if type_plot == 'scatter':
         ax.scatter(x, y, z, s=0.5)
 
-    plt.tick_params(labelsize=7)
-    ax.set_title(title, fontsize=10)
+    plt.tick_params(labelsize=10)
+    ax.set_title(title, fontsize=15)
 
     plt.show()
     
@@ -99,3 +99,9 @@ def delay_embedding(s, T, d, step=1):
     for i in range(d):
         X.append(s[i*T: N-(d-1-i)*T:step])
     return X
+
+def moving_average(x, w):
+    '''
+    Moving average of a curve x with window w.
+    '''
+    return np.convolve(x, np.ones(w), 'valid') / w
