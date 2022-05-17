@@ -44,7 +44,7 @@ def plot_trajectories(x,y,z,title, type_plot):
     ax = Axes3D(fig)
     
     if type_plot == 'line':
-        ax.plot(x, y, z, 'b-', lw=0.5, color='lightcoral')
+        ax.plot(x, y, z, lw=0.5, color='lightcoral')
     
     if type_plot == 'scatter':
         ax.scatter(x, y, z, s=0.5)
@@ -61,7 +61,8 @@ def voxel_down_sample(data, voxel_size):
     INPUT: 
     - data: point cloud, subset of a R^n
     - voxel_size: float number indicating the size of the cubical grid of R^n
-    OUTPUT: new point cloud obtained from data by computing the mean of the points of the original point cloud points that are inside each grid cube.
+    OUTPUT: new point cloud obtained from data by computing the mean of the points of the original point
+    cloud points that are inside each grid cube.
     '''
     
     dim = len(data[0])
