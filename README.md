@@ -1,4 +1,5 @@
 # intrinsicPH
+* Repository: https://github.com/ximenafernandez/intrinsicPH
 
 ## Author: 
 * Ximena Fernández
