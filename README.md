@@ -1,6 +1,10 @@
 # intrinsicPH
+* Repository: https://github.com/ximenafernandez/intrinsicPH
 
-_Author:_ Ximena Fernández
+### Author: 
+* Ximena Fernández
+
+### About:
 
 * This is the code related to the computational experiments of the article:
 <a href="https://arxiv.org/abs/2012.07621" target="_blank"> Intrinsic persistent homology via density-based metric learning </a>
